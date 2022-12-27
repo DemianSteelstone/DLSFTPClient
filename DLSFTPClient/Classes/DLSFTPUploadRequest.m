@@ -78,7 +78,7 @@ static const size_t cBufferSize = 8192;
     LIBSSH2_SFTP_HANDLE *handle = NULL;
     while (   (handle = libssh2_sftp_open(  sftp
                                           , [self.remotePath UTF8String]
-                                          , LIBSSH2_FXF_WRITE|LIBSSH2_FXF_CREAT|LIBSSH2_FXF_READ
+                                          , LIBSSH2_FXF_WRITE|LIBSSH2_FXF_CREAT|LIBSSH2_FXF_READ|LIBSSH2_FXF_TRUNC
                                           , LIBSSH2_SFTP_S_IRUSR|LIBSSH2_SFTP_S_IWUSR|
                                           LIBSSH2_SFTP_S_IRGRP|LIBSSH2_SFTP_S_IROTH)) == NULL
            && (libssh2_session_last_errno(session) == LIBSSH2_ERROR_EAGAIN)
