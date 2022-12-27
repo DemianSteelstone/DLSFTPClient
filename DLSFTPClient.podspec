@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "Dan Leehr" => "dan@hammockdistrict.com" }
   s.source       = {
     :git => "https://github.com/DemianSteelstone/DLSFTPClient.git",
-    :branch => 'develop'
+    :tag => s.version.to_s
   }
 
   s.platform     = :ios, '9.0'
